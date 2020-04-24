@@ -1,0 +1,5 @@
+*.pdf
+*.midi
+*.aux
+*.log
+includes/text_carus.ly
