@@ -24,8 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          apt update
-          apt install wget
+          sudo apt-get update
+          sudo apt-get install wget
           wget https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
           sh lilypond-2.20.0-1.linux-64.sh --batch
 
