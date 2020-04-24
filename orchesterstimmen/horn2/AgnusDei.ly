@@ -1,6 +1,20 @@
+%{
+  Gottlob Benedikt Bierey: Agnus Dei, based on Ludwig van Beethoven's Opus 10 No. 1
+
+  This file belongs to this repository:
+  https://github.com/fzalkow/bierey-beethoven-agnus-dei
+
+  This file is licensed under a Creative Commons Attribution 4.0 International License.
+  http://creativecommons.org/licenses/by/4.0/
+
+  Engraving and editing: Frank Zalkow, 2019–2020
+
+  Source: Österreichische Nationalbibliothek, Musiksammlung, Signatur F24.St.Peter.F158
+  http://digital.onb.ac.at/RepViewer/viewer.faces?doc=DTL_7300129&order=1&view=SINGLE
+%}
+
 \version "2.19.81"
 \include "deutsch.ly"
-% http://digital.onb.ac.at/RepViewer/viewer.faces?doc=DTL_7300129&order=1&view=SINGLE
 
 #(set-default-paper-size "a4")
 
@@ -33,7 +47,7 @@ scoreAHornF = \relative c'' {
   \transpose as c { \relative c'' {
     \global
     \tempo "Adagio" 8=63
-    
+
     as4\p (g
     as4.) r8
     es'4 (as,4
