@@ -31,7 +31,7 @@ jobs:
 
       - name: Set main file
         run: |
-          /home/runner/bin/lilypond -I includes/ AgnusDei.ly
+          /home/runner/bin/lilypond -dno-point-and-click -I includes/ AgnusDei.ly
 
       - name: Upload pdf
         uses: actions/upload-artifact@v1

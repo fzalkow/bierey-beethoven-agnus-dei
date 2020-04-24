@@ -23,7 +23,7 @@ jobs:
 
       - name: Set main file
         run: |
-          /home/runner/bin/lilypond -I includes/ AgnusDei.ly
+          /home/runner/bin/lilypond -dno-point-and-click -I includes/ AgnusDei.ly
 
       - name: Create Release
         id: create_release
