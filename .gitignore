@@ -2,4 +2,5 @@
 *.midi
 *.aux
 *.log
+*.py
 includes/text_carus.ly
