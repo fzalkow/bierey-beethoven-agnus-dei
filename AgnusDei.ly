@@ -9,7 +9,7 @@
 
   Engraving and editing: Frank Zalkow, 2019–2020
 
-  Source: Österreichische Nationalbibliothek, Musiksammlung, Signatur F24.St.Peter.F158
+  Source: Austrian National Library, music collection, signature F24.St.Peter.F158
   http://digital.onb.ac.at/RepViewer/viewer.faces?doc=DTL_7300129&order=1&view=SINGLE
 %}
 
