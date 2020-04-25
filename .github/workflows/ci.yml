@@ -25,16 +25,27 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install wget
+          sudo apt-get install wget poppler-utils
           wget https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
           sh lilypond-2.20.0-1.linux-64.sh --batch
 
-      - name: Set main file
+      - name: Set full score
         run: |
           /home/runner/bin/lilypond -dno-point-and-click -I includes/ AgnusDei.ly
 
-      - name: Upload pdf
+      - name: Set parts
+        run: |
+          for f in orchesterstimmen/*/*.ly; do /home/runner/bin/lilypond -dno-point-and-click -I includes/  -o parts_$(basename $(dirname $f)) $f; done
+          pdfunite $(ls -1 parts_*.pdf | sort) AgnusDei_parts.pdf
+
+      - name: Upload full score pdf
         uses: actions/upload-artifact@v1
         with:
           name: AgnusDei
           path: AgnusDei.pdf
+
+      - name: Upload parts pdf
+        uses: actions/upload-artifact@v1
+        with:
+          name: AgnusDei_parts
+          path: AgnusDei_parts.pdf

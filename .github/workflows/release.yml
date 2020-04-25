@@ -17,13 +17,18 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install wget
+          sudo apt-get install wget poppler-utils
           wget https://lilypond.org/download/binaries/linux-64/lilypond-2.20.0-1.linux-64.sh
           sh lilypond-2.20.0-1.linux-64.sh --batch
 
-      - name: Set main file
+      - name: Set full score
         run: |
           /home/runner/bin/lilypond -dno-point-and-click -I includes/ AgnusDei.ly
+
+      - name: Set parts
+        run: |
+          for f in orchesterstimmen/*/*.ly; do /home/runner/bin/lilypond -dno-point-and-click -I includes/  -o parts_$(basename $(dirname $f)) $f; done
+          pdfunite $(ls -1 parts_*.pdf | sort) AgnusDei_parts.pdf
 
       - name: Create Release
         id: create_release
@@ -36,8 +41,8 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Upload Release Asset
-        id: upload-release-asset
+      - name: Upload Release Asset (full score pdf)
+        id: upload-release-asset-1
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -45,4 +50,15 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
           asset_path: ./AgnusDei.pdf
           asset_name: AgnusDei.pdf
+          asset_content_type: application/pdf
+
+      - name: Upload Release Asset (parts pdf)
+        id: upload-release-asset-2
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps
+          asset_path: ./AgnusDei_parts.pdf
+          asset_name: AgnusDei_parts.pdf
           asset_content_type: application/pdf
