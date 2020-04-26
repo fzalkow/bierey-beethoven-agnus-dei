@@ -8,7 +8,7 @@ This repository contains LilyPond files for "Agnus Dei" of Gottlob Benedikt Bier
 lilypond -dno-point-and-click -I ./includes AgnusDei.ly
 ```
 
-In the [releases of this Github repository](https://github.com/fzalkow/bierey-beethoven-agnus-dei/releases), you find pre-compiled PDF files for the full score as well as the orchestral parts.
+In the [latest release of this Github repository](https://github.com/fzalkow/bierey-beethoven-agnus-dei/releases/latest), you find pre-compiled PDF files for the full score as well as the orchestral parts.
 
 ## Background
 
