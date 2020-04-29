@@ -1,12 +1,16 @@
-\documentclass[a4paper,9pt]{extarticle}
+\documentclass[paper=A3,12pt]{scrartcl}
 % General document formatting
-\usepackage[margin=0.8in]{geometry}
-\usepackage[parfill]{parskip}
+\usepackage[margin=2in]{geometry}
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{slantsc}
+\usepackage[ngerman]{babel}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage{mathptmx}
 
 \usepackage{booktabs}
+
+\usepackage[style=authortitle-dw,library=true,nopublisher=false]{biblatex}
+\renewcommand{\libraryfont}{\small}  % \small\sffamily
+\bibliography{literatur}
 
 \newcommand{\note}[1]{\textsl{#1}}
 
@@ -14,24 +18,56 @@
 \begin{document}
 \thispagestyle{empty}
 
-{\centering \textsc{\LARGE Anmerkungen}\\
-\textsc{zum Notensatz für G. B. Biereys \textsl{\textsc{Agnus Dei}} nach L. v. Beethovens Opus 10 Nr. 1} \par}
-\bigskip
+\section{Einführung}
 
-Folgende Kurzübersicht listet allgemeine und spezielle Anmerkungen, die Entscheidungen zum Notensatz betreffen.
-Unten folgen einige offene Punkte, die noch zu klären sind.
+Vorliegende Edition legt erstmals die Orchesterpartitur von Gottlob Benedikt Biereys \textit{Agnus Dei} nach dem \textit{Adagio} aus Ludwig van Beethovens Klaviersonate Nr.~5 c-Moll op.~10 Nr.~1 in modernen Notenbild vor.\medskip
 
-\section{Allgemeines}
+Anlass für die Edition war ein geplantes Konzert des Vokalensembles St. Lorenz, Nürnberg.
+Der Lorenzkantor KMD Matthias Ank plante das Stück in der Orchesterfassung am 23.\ März 2020 aufzuführen, was durch die COVID-19-Pandemie 2019/20 schließlich abgesagt werden musste.
+Bislang stand das Stück als moderner Notensatz nur in einer Fassung mit Orgelbegleitung durch den Carus-Verlag zur Verfügung.\footcite{2018_Schumacher_AgnusDei_Carus}
+Um modernes Notenmaterial für das geplante Konzert verwenden zu können, wurde die vorliegende Edition erstellt.\medskip
+
+Die alleinige Quelle für die Edition ist der Erstdruck von Breitkopf \& Härtel, der in digitaler Form durch die Österreichische Nationalbibliothek bereitgestellt wird.\footcite{Bierey_AgnusDei_Breitkopf}
+Alle Materialien des Editionsprojektes sind in einem Github-Repositorium\footnote{\url{https://github.com/fzalkow/bierey-beethoven-agnus-dei}} unter einer Creative Commons Lizenz frei verfügbar.
+
+\section{Zum Stück}
+
 \begin{itemize}
-\item Die Reihenfolge der Instrumente wurde wie folgt geändert: Holzbläser, Horn, Streicher ohne Kontrabass, Singstimmen, Kontrabass.
-\item Dynamikvorzeichnungen Kb wurde vom Cello übernommen
-\item Doppelschlag vereinheitlicht: Vorzeichen immer darunter
-\item Vertikale Position Dynamik vereinheitlicht: Instrumente unten, Stimmen oben
-\item Fehlende N-tolen Zahlen ergänzt
-\item Horizontale Position Dynamik vereinheitlicht (z.B.\ T.\ 5, 32, 35, 79, 82, 84, 102)
+\item  Hat von Euch jemand Zugriff zum New Grove? Vielleicht kann man aus dem Artikel\footcite{2001_Haertwig_Bierey_Grove} zu Bierey ein bisschen was zusammenfassen?
 \end{itemize}
 
-\section{Spezielles}
+Die Allgemeine Musikalische Zeitung bespricht das \textit{Agnus Dei} gemeinsam mit Biereys \textit{Kyrie} nach dem ersten Satz aus Beethovens Klaviersonate Nr.~14 op.~27 Nr.~2 in cis-Moll im Juli 1832:
+
+\begin{quote}
+  So schön diese Musik bekanntlich an und für sich ist, so gut ist sie arrangirt.
+  Es ist ein Agnus Dei, das hoffentlich überall Eingang haben und die Hörer erbauen wird.
+  Gleich schön und dem Zwecke entsprechend ist das Kyrie.
+  Der Druck dieser Partituren ist vortrefflich.
+  Wir haben wohl nicht nöthig beyde Nummern erst mit beschreibenden Worten zu empfehlen:
+  das Publicum wird von selbst nach ihnen verlangen und wird sich nicht täuschen.\footcite{1832_NA_Rezension_AMZ}
+\end{quote}
+
+
+\section{Editorische Hinweise}
+
+Bei der vorliegenden Edition handelt es sich um eine praktische Ausgabe.
+Folgende Kurzübersicht listet zunächst einige allgemeine Anmerkungen, die Entscheidungen zum Notensatz betreffen.
+Anschließend werden Einzelanmerkungen zu bestimmten musikalischen Stellen gelistet.
+
+\subsection{Allgemeines}
+
+\begin{itemize}
+  \setlength\itemsep{0.25\baselineskip}
+  \item Die Reihenfolge der Instrumente wurde wie folgt geändert: Holzbläser, Horn, Streicher ohne Kontrabass, Singstimmen, Kontrabass.
+  \item Die Dynamikvorzeichnungen für den Kontrabass wurden vom Cello übernommen.
+  \item Die Doppelschläge vereinheitlicht, sodass das Vorzeichen immer darunter plaziert ist.
+  \item Die vertikale Position der Dynamikvorzeichnung wurde vereinheitlicht: Instrumente unten, Stimmen oben.
+  \item Fehlende N-tolen Zahlen wurden ergänzt.
+  \item Die horizontale Position der Dynamikvorzeichnung wurde vereinheitlicht (z.B.\ T.\ 5, 32, 35, 79, 82, 84, 102).
+  \item Der Text für die Gesangsstimmen wurde vom Erstdruck übernommen. Damit unterscheidet sich der Text von der Fassung mit Orgelbegleitung\footcite{2018_Schumacher_AgnusDei_Carus}, die im Carus-Verlag erhältlich ist.
+\end{itemize}
+
+\subsection{Einzelanmerkungen}
 
 \begin{center}
 
@@ -88,6 +124,9 @@ Unten folgen einige offene Punkte, die noch zu klären sind.
 
 \bottomrule
 \end{tabular}
+
+\setlength\bibitemsep{0.25\baselineskip}  % {1.5\itemsep}
+\printbibliography[heading=bibnumbered]
 
 \end{center}
 
