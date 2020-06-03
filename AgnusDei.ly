@@ -26,11 +26,24 @@ decrescMark = \markup{\italic decresc.}
 imo = \markup{1\hspace #-0.75 \super{mo}}
 rf = \markup{\dynamic rf}
 
-\include "copyright_a3.ly"
-\include "text_erstdruck.ly"
+%\include "includes/copyright_a3.ly"
+\include "includes/copyright_quart.ily"
+\include "includes/text_erstdruck.ly"
+
+#(set! paper-alist (cons '("quart" . (cons (* 27 cm) (* 34 cm))) paper-alist))
+
+\paper {
+  #(set-paper-size "quart")
+  two-sided = ##t
+  top-margin = 15
+  bottom-margin = 15
+  inner-margin = 15
+  outer-margin = 15
+  binding-offset = 5
+}
 
 \header {
-  \include "header.ly"
+  \include "includes/header.ly"
 }
 
 
@@ -689,7 +702,7 @@ scoreAHornF = \relative c'' {
     <as es'>4\p (<g es'>
     <as es'>4.) r8
     <es' b'>4 (<as, as'>4
-    <es' b'>4. r8)
+    <es' b'>4.) r8
     <<{as2 as4 as4\fp}\\{as,4 c_\crescMark as' as}>>
     R2
     R2
